@@ -1,0 +1,24 @@
+---
+layout: guide
+permalink: psycopg2
+category: Postgres
+guide-title: Using psycopg2
+guide-desc: The steps below will walk you through connecting to Postgres using psycopg2.
+guide-image: postgres_psycopg2_01.png
+steps:
+  - step-hr: hr
+  - step-heading: 1. Open a notebook.
+  - step-instruction: If you're not already logged in, follow the steps found <a href="/login" target="_blank">here</a>. In the upper-right corner, click the <strong>New</strong> button and select <strong>compute</strong> (or any kernel that has psycopg2 installed).
+  - step-image: postgres_psycopg2_01.png
+  - step-hr: hr
+  - step-heading: 2. Connect to the 'cusp' database
+  - step-instruction: In the first cell, copy and paste the following code to create a connection to the <code>cusp</code> Postgres database.
+  - step-code:
+      lang: python
+      code: |
+        import psycopg2
+
+        conn = psycopg2.connect("host=stuffed dbname=cusp")
+  - step-image: postgres_psycopg2_02.png
+  - step-instruction: You can use the <code>conn</code> connection to query the <code>cusp</code> database. For examples on how to use <code>psycopg2</code>, check out this <a href="https://wiki.postgresql.org/wiki/Psycopg2_Tutorial" target="_blank">Psycopg2 Tutorial</a>.
+---

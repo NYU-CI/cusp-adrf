@@ -1,0 +1,30 @@
+---
+layout: guide
+permalink: sftp
+category: SFTP
+guide-title: SFTP via Terminal
+guide-desc: The steps below will walk you through transferring files using the sftp command in Terminal.
+guide-image: sftp_sftp_01.png
+steps:
+  - step-hr: hr
+  - step-heading: 1. Open a Terminal
+  - step-instruction: On your local machine, open a Terminal session. Navigate to the directory where the file(s) you want to transfer are located.
+  - step-hr: hr
+  - step-heading: 2. Connect to the server
+  - step-instruction: Enter the following command to establish an sftp connection with the server.
+  - step-code:
+      lang: shell
+      code: "sftp grahamhenke@sftp.cusp.nyu.edu"
+  - step-instruction: Enter your password when prompted.
+  - step-note: "Note: You need to use your own Username/NetID. <code>grahamhenke</code> is used here only as an example."
+  - step-hr: hr
+  - step-heading: 3. Use 'put' to transfer files
+  - step-instruction: You will see an <code>sftp&gt;</code> prompt. Use the <code>put</code> command to transfer files. For example, if you have a file named <code>analysis.ipynb</code>, you can transfer this by running the following command.
+  - step-code:
+      lang: shell
+      code: "put analysis.ipynb"
+  - step-note: "Reminder: You need to make the sftp connection from the directory on your local machine where the file exists."
+  - step-heading: 4. Disconnect from the server
+  - step-instruction: Once you are finished, type <code>bye</code> at the <code>sftp&gt;</code> prompt and press return. The image below shows all of the steps executed in succession from the Terminal.
+  - step-image: sftp_sftp_01.png
+---

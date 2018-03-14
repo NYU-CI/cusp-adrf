@@ -1,0 +1,57 @@
+---
+layout: guide
+permalink: virtualenvironments
+category: JupyterHub
+guide-title: Virtual Environments
+guide-desc: The steps below will walk you through using virtual environments and create kernels from these environments so that they may be used in your notebooks.
+guide-image: jupyter_virtual_02.png
+steps:
+  - step-hr: hr
+  - step-heading: 1. Open a Terminal.
+  - step-instruction: If you're not already logged in, follow the steps found <a href="/login" target="_blank">here</a>. In the upper-right corner, click the <strong>New</strong> button and select <strong>Terminal</strong>.
+  - step-image: jupyter_virtual_01.png
+  - step-hr: hr
+  - step-heading: 2. Create virtual environment
+  - step-instruction: In the Terminal, enter the command below to create a virtual environment. In this example, <code>myVE</code> is the name used for the virtual environment, but you may name this whatever you'd like.
+  - step-code:
+      lang: shell
+      code: conda create -n myVE python=2.7
+  - step-instruction: Press return when asked to proceed. All packages needed by the virtual environment will be downloaded and installed.
+  - step-image: jupyter_virtual_02.png
+  - step-hr: hr
+  - step-heading: 3. Activate virtual environment
+  - step-instruction: Run <code>source activate myVE</code> to activate your virtual environment. Again, you may have used a different name, so substitute as appropriate. You should now see a prompt with the name of your virtual environment in parenthesis as shown.
+  - step-code:
+      lang: shell
+      code: |
+        grahamhenke@bacon:~$ source activate myVE
+        (myVE) grahamhenke@bacon:~$
+  - step-hr: hr
+  - step-heading: 4. Install packages
+  - step-instruction: "Now that you are in your virtual environment, you may install packages using <code>conda install</code>. For example, to install the <code>requests</code> package, run:"
+  - step-code:
+      lang: shell
+      code: conda install requests
+  - step-hr: hr
+  - step-heading: 5. Install ipykernel
+  - step-instruction: "To use your virtual environment and the packages installed in it, you will need to create an environment kernel. To do this, you first need to install <code>ipykernel</code> by running the following:"
+  - step-code:
+      lang: shell
+      code: conda install ipykernel
+  - step-hr: hr
+  - step-heading: 6. Create the kernel
+  - step-instruction: "Now create the kernel for your environment by running:"
+  - step-code:
+      lang: shell
+      code: python -m ipykernel install --user --name myKernel --display-name myKernel
+  - step-note: "Note: This example uses 'myKernel' as the name and display-name, but you may choose a more meaningful name."
+  - step-hr: hr
+  - step-heading: 7. Open a notebook with the kernel
+  - step-instruction: Navigate back to the <strong>Home</strong> tab. Make sure to first <strong>refresh</strong> the page. Next, click the <strong>New</strong> button and select the name of your kernel, which is <strong>myKernel</strong> in this example.
+  - step-image: jupyter_virtual_03.png
+  - step-hr: hr
+  - step-heading: 8. Import packages
+  - step-instruction: You can now import and use packages from your kernel. Notice the <code>requests</code> package imports successfully.
+  - step-note: "Note: Please be aware that common packages you may be used to using (such as pandas) are not installed by default and you will have to explicitly install these using <code>conda install</code> in your virtual environment."
+  - step-image: jupyter_virtual_04.png
+---

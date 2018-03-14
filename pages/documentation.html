@@ -1,0 +1,47 @@
+---
+layout: default
+permalink: documentation
+---
+{% comment %} Generate unique category array {% endcomment %}
+{% assign categories = "" | split: ", " %}
+{% for page in site.pages %}
+  {% if page.layout == 'guide' %}
+    {% assign categories = page.category | split: ", " | concat: categories %}
+  {% endif %}
+{% endfor %}
+{% assign categories = categories | uniq | sort %}
+
+<div class="container-fluid panel">
+  <div class="row justify-content-center panel-row">
+    <div class="col-12 col-md-10 col-lg-8">
+      <h1>{{site.data.documentation.panel-title}}</h1>
+      <p>{{site.data.documentation.panel-description}}</p>
+    </div>
+  </div>
+
+  {% for category in categories %}
+  <div class="row justify-content-center panel-row">
+    <div class="col-12 col-md-10 col-lg-8">
+      <h3>{{category}}</h3>
+      <div class="row">
+        {% for page in site.pages %}
+          {% if page.layout == 'guide' and page.category == category %}
+            <div class="col-12 col-md-3">
+
+              <a class="destyled" href="{{page.permalink}}">
+                <div class="card">
+                  <img class="card-img-top" src="{{site.baseurl}}/static/assets/guides/{{page.guide-image}}" alt="{{page.guide-title}}">
+                  <div class="card-body">
+                    <h5 class="card-title center-title">{{page.guide-title}}</h5>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

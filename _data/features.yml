@@ -1,0 +1,12 @@
+panel-title: Features
+panel-description: The CUSP ADRF has been developed to be a dedicated resource for CUSP students and teaching faculty for use in their coursework and Capstone projects. We've focused on making the experience of working in this new computing environment as seamless as possible.
+features:
+- title: Ease of Access
+  text: Access the environment straight away in a web browser without the need for VPN clients or SSH tunnels.
+  logo: access.png
+- title: Core Tools
+  text: The CUSP ADRF provides the essentials for your analysis such as JupyterHub, Postgres, command line, and SFTP.
+  logo: tool.png
+- title: Customization
+  text: We support virtual environments so that you may customize your environment and install the packages and libraries you need.
+  logo: customization.png

@@ -1,0 +1,28 @@
+<div class="container-fluid panel">
+    <div class="row justify-content-center panel-row">
+      <div class="col-12 col-md-10 col-lg-8">
+        <h3>{{include.features.panel-title}}</h3>
+        <p>{{include.features.panel-description}}</p>
+      </div>
+    </div>
+
+  <div class="row justify-content-center panel-row">
+    <div class="col-12 col-md-10 col-lg-8">
+      <div class="row">
+        {% for feature in include.features.features %}
+
+        <div class="col-12 col-md-4">
+            <div class="card">
+              <img class="card-img-top feature-logo" src="{{site.baseurl}}/static/assets/logos/{{feature.logo}}" alt="{{feature.title}}">
+              <div class="card-body">
+                <h5 class="card-title">{{feature.title}}</h5>
+                <p class="card-text">{{feature.text}}</p>
+              </div>
+            </div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

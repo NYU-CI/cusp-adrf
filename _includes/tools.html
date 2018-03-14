@@ -1,0 +1,28 @@
+<div class="container-fluid panel">
+  <div class="row justify-content-center panel-row">
+    <div class="col-12 col-md-10 col-lg-8">
+      <h3>{{include.tools.panel-title}}</h3>
+        <p>{{include.tools.panel-description}}</p>
+    </div>
+  </div>
+
+
+  <div class="row justify-content-center panel-row">
+    <div class="col-12 col-md-10 col-lg-8">
+      <div class="row">
+        {% for tool in include.tools.tools %}
+        <div class="col-12 col-sm-6 col-md-4">
+          <a class="destyled" href="{{tool.link}}" target="_blank">
+            <div class="card">
+              <img class="card-img-top" src="{{site.baseurl}}/static/assets/logos/{{tool.logo}}" alt="{{tool.name}}">
+              <div class="card-body">
+                <h5 class="card-title center-title">Launch {{tool.name}}</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

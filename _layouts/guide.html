@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<!-- Guide title, description, and image -->
+<div class="container">
+
+  {% if page.guide-title %}
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <h1 id="main-title">{{page.guide-title}}</h1>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.guide-desc %}
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <p class="instruction-text">{{page.guide-desc}}</p>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.guide-image %}
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <img src="{{site.baseurl}}/static/assets/guides/{{page.guide-image}}" class="img-fluid">
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+
+<!-- Steps  of guide -->
+<div class="container">
+  {% for step in page.steps %}
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+
+        {% if step.step-heading %}
+        <h3 class="step-heading">{{step.step-heading}}</h3>
+        {% endif %}
+
+        {% if step.step-instruction %}
+        <p class="step-instruction">{{step.step-instruction}}</p>
+        {% endif %}
+
+        {% if step.step-image %}
+        <img src="{{site.baseurl}}/static/assets/guides/{{step.step-image}}" class="img-fluid">
+        {% endif %}
+
+        {% if step.step-code %}
+        <div class=step-code>
+          {% if step.step-code.lang == "python" %}
+            {% highlight python %}{{step.step-code.code}}{% endhighlight %}
+          {% endif %}
+            {% if step.step-code.lang == "shell" %}
+              {% highlight shell %}{{step.step-code.code}}{% endhighlight %}
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% if step.step-note %}
+        <p class="step-note">{{step.step-note}}</p>
+        {% endif %}
+
+        {% if step.step-hr %}
+        <hr>
+        {% endif %}
+
+
+
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{{content}}

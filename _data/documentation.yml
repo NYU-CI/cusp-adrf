@@ -1,6 +1,10 @@
 panel-title: Documentation
 panel-description: We invite you to explore our documentation. We've put together guided walkthroughs that will help you learn how to use all of the features the CUSP ADRF.
 docs:
+- title: All Documentation
+  text: See all documentation here
+  image: jupyter_virtual_02.png
+  link: documentation
 - title: Log in to JupyterHub
   text: How to log in to JupyterHub
   image: jupyter_login_04.png
@@ -9,7 +13,3 @@ docs:
   text: Working with Virtual Environments
   image: jupyter_virtual_02.png
   link: virtualenvironments
-- title: View All Documentation
-  text: See all documentation here
-  image: jupyter_virtual_02.png
-  link: documentation

@@ -21,8 +21,8 @@ body { padding-top: 57px; font-family: 'Raleway', Helvetica, sans-serif;}
 .panel-title { color: white; text-shadow: 1px 1px black; font-weight: 300; padding: 8px; background-color: #5D2B85; box-shadow: 4px 4px 12px #000; }
 .panel-description { padding: 8px; font-size: 1.2rem; font-weight: 500; }
 .card-no-border { border: none; }
-.card-tool { margin-bottom: 8px; box-sizing: border-box; box-shadow: none; }
-.card-tool:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.card-tool, .card-doc { margin-bottom: 8px; box-sizing: border-box; box-shadow: none; }
+.card-tool:hover, .card-doc:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 .card-img-top { max-height: 120px; max-width: 120px; margin-left: auto; margin-right: auto; padding: 8px; }
 .feature-logo { width: auto; height: 80px; padding: 0; margin-top: 8px; margin-bottom: 8px; }
 .card { margin-top: 16px; margin-bottom: 32px; }
@@ -35,7 +35,9 @@ a.destyled:link, a.destyled:visited, a.destyled:hover, a.destyled:active { color
 
 /* Footer */
 footer {
+  padding-top: 40px; padding-bottom: 40px;
   background-color: #262727;
+  color: #929394;
 }
 
 

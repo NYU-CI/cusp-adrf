@@ -3,13 +3,5 @@ panel-description: We invite you to explore our documentation. We've put togethe
 docs:
 - title: All Documentation
   text: See all documentation here
-  image: jupyter_virtual_02.png
+  image: ve_python_02.png
   link: documentation
-- title: Log in to JupyterHub
-  text: How to log in to JupyterHub
-  image: jupyter_login_04.png
-  link: login
-- title: Virtual Environments
-  text: Working with Virtual Environments
-  image: jupyter_virtual_02.png
-  link: virtualenvironments

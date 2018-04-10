@@ -1,0 +1,48 @@
+---
+layout: guide
+permalink: ve-r
+category: Virtual Environments
+guide-title: Create An R Virtual Environment
+guide-desc: The steps below will walk you through creating an R virtual environment and kernel so that it may be used in your notebooks.
+guide-image: ve_r_02.png
+steps:
+  - step-hr: hr
+  - step-heading: 1. Open a Terminal.
+  - step-instruction: If you're not already logged in, follow the steps found <a href="/login" target="_blank">here</a>. In the upper-right corner, click the <strong>New</strong> button and select <strong>Terminal</strong>.
+  - step-image: ve_r_01.png
+  - step-hr: hr
+  - step-heading: 2. Create virtual environment
+  - step-instruction: In the Terminal, enter the command below to create a virtual environment. In this example, <code>r_env</code> is the name used for the virtual environment, but you may name this whatever you'd like.
+  - step-code:
+      lang: shell
+      code: conda create -n r_env r-essentials
+  - step-instruction: Press return when asked to proceed. All packages needed by the virtual environment will be downloaded and installed.
+  - step-note: "Note: This will install the default R interpreter and the R Essentials bundle. If you need a more custom installation, please refer to <a href=\"https://docs.anaconda.com/anaconda/user-guide/tasks/use-r-language\" target=\"_blank\">https://docs.anaconda.com/anaconda/user-guide/tasks/use-r-language</a>."
+  - step-image: ve_r_02.png
+  - step-hr: hr
+  - step-heading: 3. Activate virtual environment
+  - step-instruction: Run <code>source activate r_env</code> to activate your virtual environment. Again, you may have used a different name, so substitute as appropriate. You should now see a prompt with the name of your virtual environment in parenthesis as shown.
+  - step-code:
+      lang: shell
+      code: |
+        (r_env) grahamhenke@bacon:~$
+  - step-hr: hr
+  - step-heading: 4. Run R
+  - step-instruction: "Once inside the virtual environment, start R by simply typing <code>R</code> and pressing <strong>Return</strong>. You will see some R version information and help text, followed by a prompt as shown:"
+  - step-code:
+      lang: shell
+      code: |
+        >
+  - step-hr: hr
+  - step-heading: 5. Create a kernel using IRkernel
+  - step-instruction: "Enter the command <code>IRkernel::installspec()</code>. This creates an R kernel which will now be available in Jupyter."
+  - step-note: "Note: This will install a kernel with the name \"ir\" and a display name of \"R\". If you need a more custom installation, please refer to <a href=\"https://github.com/IRkernel/IRkernel/\" target=\"_blank\">https://github.com/IRkernel/IRkernel/</a>."
+  - step-hr: hr
+  - step-heading: 6. Open a notebook with the kernel
+  - step-instruction: Navigate back to the <strong>Home</strong> tab. Make sure to first <strong>refresh</strong> the page. Next, click the <strong>New</strong> button and select the name of your kernel, which is <strong>R</strong> in this example.
+  - step-image: ve_r_03.png
+  - step-hr: hr
+  - step-heading: 7. Run R commands
+  - step-instruction: You can now run cells with R code as shown.
+  - step-image: ve_r_04.png
+---

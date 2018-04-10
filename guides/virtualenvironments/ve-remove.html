@@ -1,0 +1,34 @@
+---
+layout: guide
+permalink: ve-remove
+category: Virtual Environments
+guide-title: Remove a Virtual Environment
+guide-desc: The steps below will walk you through removing a virtual environment.
+guide-image: ve_remove_02.png
+steps:
+  - step-hr: hr
+  - step-heading: 1. Open a Terminal.
+  - step-instruction: If you're not already logged in, follow the steps found <a href="/login" target="_blank">here</a>. In the upper-right corner, click the <strong>New</strong> button and select <strong>Terminal</strong>.
+  - step-image: ve_remove_01.png
+  - step-hr: hr
+  - step-heading: 2. List virtual environments
+  - step-instruction: "Run <code>conda env list</code> to see a list of virtual environments. Your output will look something like the following:"
+  - step-image: ve_remove_02.png
+  - step-hr: hr
+  - step-heading: 3. Remove the environment
+  - step-instruction: "Run <code>conda env remove -n &lt;environment_name&gt;</code>, substituting the name of the environment you would like to remove. For example:"
+  - step-code:
+      lang: shell
+      code: conda env remove -n myVE
+  - step-instruction: Press return when asked to proceed. The environment and all packages inside will be removed. Please be patient as this may take a few minutes.
+  - step-hr: hr
+  - step-heading: 4. Remove associated kernel
+  - step-instruction: If you have an associated kernel, you should remove this as well. Jupyter kernels are located in <code>.local/share/jupyter/kernels/</code>. To remove them, <code>cd</code> to this directory and run <code>rm -rf &lt;kernel_name&gt;</code> to remove the associated kernel.
+  - step-code:
+      lang: shell
+      code: |
+        grahamhenke@bacon:~$ cd .local/share/jupyter/kernels/
+        grahamhenke@bacon:~/.local/share/jupyter/kernels$ ls
+        g27  ir  mykernel
+        grahamhenke@bacon:~/.local/share/jupyter/kernels$ rm -rf mykernel
+---

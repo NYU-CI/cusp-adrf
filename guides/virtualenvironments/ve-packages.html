@@ -1,0 +1,36 @@
+---
+layout: guide
+permalink: ve-packages
+category: Virtual Environments
+guide-title: Install Additional Packages
+guide-desc: <strong>Prerequisite:</strong> You must have an existing virtual environment. Instructions for creating one can be found <a href="/ve-python" target="_blank">here</a>.<br><br>The steps below will walk you through installing additional packages in an existing virtual environment.
+guide-image: ve_packages_04.png
+steps:
+  - step-hr: hr
+  - step-heading: 1. Open a Terminal
+  - step-instruction: If you're not already logged in, follow the steps found <a href="/login" target="_blank">here</a>. In the upper-right corner, click the <strong>New</strong> button and select <strong>Terminal</strong>.
+  - step-image: ve_packages_01.png
+  - step-hr: hr
+  - step-heading: 2. Activate your virtual environment
+  - step-instruction: Run <code>source activate &lt;name_of_ve&gt;</code> where <strong>&lt;name_of_ve&gt;</strong> is the name of your virtual environment. If you have forgetten and you need to see a list, you can run <code>conda env list</code>.
+  - step-code:
+      lang: shell
+      code: |
+        grahamhenke@bacon:~$ source activate myEnv
+        (myEnv) grahamhenke@bacon:~$
+  - step-hr: hr
+  - step-heading: 3. Install packages
+  - step-instruction: "Now that you are in your virtual environment, you may install packages using <code>conda install</code> or <code>pip install</code>. For example, to install the <code>requests</code> package, run:"
+  - step-code:
+      lang: shell
+      code: conda install requests
+  - step-note: "Note: We <strong>highly</strong> recommend trying <code>conda install</code> first, as it installs low level dependencies that some packages (such as tensorflow) need. If this does not work, then use <code>pip install</code>."
+  - step-hr: hr
+  - step-heading: 4. Open a notebook with the kernel
+  - step-instruction: Navigate back to the <strong>Home</strong> tab. Next, click the <strong>New</strong> button and select the name of your kernel, which is <strong>myEnv</strong> in this example.
+  - step-image: ve_packages_03.png
+  - step-hr: hr
+  - step-heading: 5. Import packages
+  - step-instruction: You can now import and use packages from your kernel. Notice the <code>requests</code> package imports successfully.
+  - step-image: ve_packages_04.png
+---

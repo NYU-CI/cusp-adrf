@@ -1,0 +1,33 @@
+---
+layout: guide
+permalink: ve-osmnx
+category: Virtual Environments
+guide-title: Create an osmnx Python environment
+guide-desc: The steps below will walk you through setting up a virtual environment that contains osmnx
+guide-image: ve_osmnx_01.png
+steps:
+  - step-hr: hr
+  - step-heading: 1. Open a Terminal
+  - step-instruction: If you're not already logged in, follow the steps found <a href="/login" target="_blank">here</a>. In the upper-right corner, click the <strong>New</strong> button and select <strong>Terminal</strong>.
+  - step-image: ve_packages_01.png
+  - step-hr: hr
+  - step-heading: 2. Create osmnx environment
+  - step-instruction: Run the following commands one-by-one in the Terminal. This will create a new virtual environment named <strong>osmnx</strong>, install necessary packages, and create a kernel for using the environment in Jupyter.
+  - step-code:
+      lang: shell
+      code: |
+        conda create -n osmnx python=3
+        source activate osmnx
+        conda install geopandas
+        pip install osmnx
+        conda install ipykernel
+        python -m ipykernel install --user --name osmnx --display-name osmnx
+  - step-hr: hr
+  - step-heading: 3. Open a notebook with the kernel
+  - step-instruction: Navigate back to the <strong>Home</strong> tab. Make sure to first <strong>refresh</strong> the page. Next, click the <strong>New</strong> button and select the <strong>osmnx</strong> kernel.
+  - step-image: ve_osmnx_01.png
+  - step-hr: hr
+  - step-heading: 4. Import and run osmnx
+  - step-instruction: You can now import and run osmnx.
+  - step-image: ve_osmnx_02.png
+---

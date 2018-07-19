@@ -1,9 +1,12 @@
 panel-title: Tools
-panel-description: The CUSP ADRF offers the most useful tools for your workflow. At launch, we are providing JupyterHub, which will give access to notebooks and a command line. More tools will be coming soon.
+panel-description: The CUSP ADRF offers the most useful tools for your workflow. We provide both JupyterHub and JupyterLab which can be used for working with traditional notebooks, a text editor, or from command line. More tools will be coming soon.
 tools:
 - name: JupyterHub
   link: https://jupyterhub.cusp.adrf.cloud
   logo: jupyter-logo.svg
+- name: JupyterLab
+  link: https://jupyterlab.cusp.adrf.cloud
+  logo: jupyterlab-logo.png
 #- name: PgAdmin 4
 #  link: "#"
 #  logo: pgadmin-logo.png

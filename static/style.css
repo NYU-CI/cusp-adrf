@@ -12,14 +12,16 @@ body { padding-top: 57px; font-family: 'Raleway', Helvetica, sans-serif;}
 .step-heading {}
 .step-code { background-color: #FAFAFA; border: 1px solid #DDD; padding: 8px; margin-bottom: 1rem; }
 .step-note { color: #888; font-size: 0.8rem; }
+.guide-list { list-style-type: none; padding: 0; margin: 12px 0px 32px 0px; }
+.guide-list li a h5:hover { font-weight: 800; }
 
 /* Main page formatting */
-.banner-logo { max-width: 60%; display: block; margin-left: auto; margin-right: auto; margin-top: 8rem; }
-.banner-text { font-size: 2rem; text-align: center; padding-bottom: 8rem; }
+.banner { background-image: url('./assets/images/brooklyn_bridge.jpg'); background-attachment: scroll; background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: 1px solid #DDD; padding-bottom: 8rem;}
+.banner-logo { max-width: 66%; display: block; margin-left: auto; margin-right: auto; margin-top: 8rem; padding: 1rem 1.5rem 1rem 1.5rem; background-color: #5D2B85DD; }
 .panel { margin-top: 3rem; border-bottom: 1px solid #DDD; }
 .panel-row { margin-bottom: 0rem; }
-.panel-title { color: white; text-shadow: 1px 1px black; font-weight: 300; padding: 8px; background-color: #5D2B85; box-shadow: 4px 4px 12px #000; }
-.panel-description { padding: 8px; font-size: 1.2rem; font-weight: 500; }
+.panel-title { color: white; text-shadow: 0px 0px black; font-size: 1.4rem; font-weight: 400; margin-left: 0px; padding: 8px 16px 8px 16px; background-color: #5D2B85; box-shadow: 0px 0px 0px #000; text-transform: uppercase; display: block;}
+.panel-description { margin-top: 16px; font-size: 1.2rem; font-weight: 500; }
 .card-no-border { border: none; }
 .card-tool, .card-doc { margin-bottom: 8px; box-sizing: border-box; box-shadow: none; }
 .card-tool:hover, .card-doc:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }

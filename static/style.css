@@ -17,7 +17,7 @@ body { padding-top: 57px; font-family: 'Raleway', Helvetica, sans-serif;}
 
 /* Main page formatting */
 .banner { background-image: url('./assets/images/brooklyn_bridge.jpg'); background-attachment: scroll; background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: 1px solid #DDD; padding-bottom: 8rem;}
-.banner-logo { max-width: 66%; display: block; margin-left: auto; margin-right: auto; margin-top: 8rem; padding: 1rem 1.5rem 1rem 1.5rem; background-color: #5D2B85DD; }
+.banner-logo { max-width: 66%; display: block; margin-left: auto; margin-right: auto; margin-top: 8rem; padding: 1rem 1.5rem 1rem 1.5rem; background-color: #5D2B85FF; border: 1px solid black; }
 .panel { margin-top: 3rem; border-bottom: 1px solid #DDD; }
 .panel-row { margin-bottom: 0rem; }
 .panel-title { color: white; text-shadow: 0px 0px black; font-size: 1.4rem; font-weight: 400; margin-left: 0px; padding: 8px 16px 8px 16px; background-color: #5D2B85; box-shadow: 0px 0px 0px #000; text-transform: uppercase; display: block;}

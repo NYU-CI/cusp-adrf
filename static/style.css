@@ -35,6 +35,10 @@ body { padding-top: 57px; font-family: 'Raleway', Helvetica, sans-serif;}
 a.destyled:link, a.destyled:visited, a.destyled:hover, a.destyled:active { color: black; text-decoration: none; }
 .center-title { text-align: center; }
 
+/* Rules of Behavior formatting */
+label { font-weight: 600; }
+.required { color: red; }
+
 /* Footer */
 footer {
   padding-top: 40px; padding-bottom: 40px;

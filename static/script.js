@@ -31,8 +31,9 @@ $('#submit-form').on('click', function(e) {
     method: "GET",
     dataType: "json",
     data: form_data
-  }).done(
-    // do something
-    alert("Thank you for your submission!")
-  );
+  }).done(function( data ) {
+      // do something
+      $('#rules-form').hide();
+      alert("Thank you for your submission!");
+    });
 })
